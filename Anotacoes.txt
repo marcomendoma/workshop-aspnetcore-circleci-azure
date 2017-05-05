@@ -1,0 +1,66 @@
+ Instruções para criação de projeto Visual Studio 
+ 
+ --------------------------------------------------------------------------------------------------
+ Obs..: Verificar a instalação do Visual Studio Code
+ 	https://www.microsoft.com/net/download/core
+ 
+ --------------------------------------------------------------------------------------------------
+ 1- Criação dos diretórios
+ 
+ mkdir workshop-yeoman					cria o diretorio
+ cd workshop-yeoman					entra no diretorio
+ mkdir src						para ficar igual a etrutura de projetos
+ --------------------------------------------------------------------------------------------------
+ 2- Instalar o yeoman e o bower
+ i  - install
+ -g - Global para estar disponivel em todas as pastas
+ 
+ npm i -g yo bower 
+ --------------------------------------------------------------------------------------------------
+ 3- Instalar o Generator do Dot net 
+ 
+ npm i -g generator-aspnet
+	
+ --------------------------------------------------------------------------------------------------
+ 4- Para startar o generator c várias opções de projetos dot net
+ yo aspnet 
+ --------------------------------------------------------------------------------------------------
+ 5 - Abri o Visual Studio com Code
+ code .
+ --------------------------------------------------------------------------------------------------
+ 6 - Versão do node
+ node -v
+ --------------------------------------------------------------------------------------------------
+ 7 - Versão do npm
+ npm -v
+ --------------------------------------------------------------------------------------------------
+ 8- Ler o projeto Jason e restaurar todos os pacotes 
+ dotnet restore
+ Obs..: Rodar toda vez que adicionar uma nova dependencia no projeto
+ --------------------------------------------------------------------------------------------------
+ 9- Para compilar o projeto
+ dotnet build
+ --------------------------------------------------------------------------------------------------
+ 10- Para executar o projeto
+ dotnet run
+ --------------------------------------------------------------------------------------------------
+ Castro - 	Servidor cross plataform, roda independente de plataforma.
+ IIs express -	Quando estiver no windows	 
+ --------------------------------------------------------------------------------------------------
+ Instalando o Entity Framework Core 1.1 E tools para Migrations
+ Install-Package Microsoft.EntityFrameworkCore
+ Install-Package Microsoft.EntityFrameworkCore.Tools
+ Install-Package Microsoft.EntityFrameworkCore.SqlServer
+ Install-Package Microsoft.EntityFrameworkCore.SqlServer.Design
+ --------------------------------------------------------------------------------------------------
+ 11- Adicionando o Migrations do Entity Framework
+ Entrar para pasta do projeto
+ dotnet ef migrations add MigracaoInicial
+ dotnet ef database update
+ dotnet ef migrations remove MigracaoInicial - caso queira remover a migratio especifica
+ 
+ via nuget console
+ Add-Migration MigracaoInicial
+ Update-Database
+ --------------------------------------------------------------------------------------------------
+ --------------------------------------------------------------------------------------------------
